@@ -1,27 +1,47 @@
 //
-// Created by Andrzej on 27.11.2022.
+// Created by Andrzej on 28.11.2022.
 //
-
 #include <stdio.h>
-typedef unsigned long long int ulli;
+#include <math.h>
+
+int isPrime(int n) {
+    if ( n == 2 || n == 3 )
+        return 1;
+    if ( n % 2 == 0 || n % 3 == 0)
+        return 0;
+    int i = 5;
+    while ( i <= sqrt(n) ) {
+        if ( n % i == 0 ) 
+            return 0; 
+        i+=2;
+
+        if ( n % i == 0 )
+            return 0;
+        i+=4;
+    }
+    return 1;
+}
 
 int main() {
+    int n;
+    scanf("%d",&n);
 
-    int start = 2001;
-    int end = 3000;
-    int sum = 0;
-    ulli product = 1;
+    if ( isPrime(n) == 1 ){
+        printf("Liczba %d jest pierwsza \n", n);
+    } else {
+        printf("Liczba %d jest nie pierwsza \n", n);
 
-    while ( start < end ) {
-        if( start % 113 == 0 ) {
-            sum += start;
-            product *= start;
-            printf("%d ",start);
+        int k=2;
+        while( sqrt(n)>1) {
+                while(n%k==0)
+                {
+                        printf("%d ",k);
+                        n/=k;
+                }
+                ++k;
         }
-        start+=2;
+        printf("\n");
     }
-
-    printf("\nSUMA = %d , ILOCZYN = %lld \n", sum, product );
 
     return 0;
 }

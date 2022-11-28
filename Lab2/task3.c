@@ -1,17 +1,20 @@
 //
-// Created by Andrzej on 27.11.2022.
+// Created by Andrzej on 28.11.2022.
 //
 #include <stdio.h>
 
 void getLine(int n, int j){
     for(int i=0;i<j;i++)
         printf(" ");
-    for(int i=n;i>=65;i--)
+
+    for(int i=65;i<=n;i++)
+        printf("%c", (char)(i));
+
+    for(int i=n-1;i>=65;i--)
         printf("%c", (char)(i));
 
 
-    for(int i=66;i<=n;i++)
-        printf("%c", (char)(i));
+
     printf("\n");
 }
 

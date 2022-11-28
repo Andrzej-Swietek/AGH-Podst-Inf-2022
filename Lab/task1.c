@@ -11,10 +11,6 @@ int main() {
     } while ( n > 9  || n < 0);
 
     for (int i = 0; i < n+1; i++) {
-        if ( i == 0 ) {
-            continue;
-        }
-        printf(" ");
         for ( int j = 0; j < n; j++)
             if ( j < n-i )
                 printf(" ");
@@ -30,10 +26,6 @@ int main() {
         }
         printf(" \n");
     }
-    for( int i=n; i >= 0; i-- ) {
-        printf("%d",i);
-    }
-    printf(" \n");
 
     return 0;
 }

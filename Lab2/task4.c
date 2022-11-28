@@ -1,23 +1,24 @@
-//
-// Created by Andrzej on 27.11.2022.
-//
-
 #include <stdio.h>
-#define EPS 0.00000001
+#include <assert.h>
+
 
 int main () {
+    double eps; 
+    scanf("%lf", &eps);
+    assert( eps > 0.0 && eps < 1.0 );
     float i = 1;
     double sum = 0;
     int count = 0;
 
     // ai > eps
-    while ( 1/(i*i) >= EPS ) {
-        sum += 1/(i*i);
+    while ( 1/(i) >= eps ) {
+        sum += 1/(i);
         i++;
         count++;
     }
 
-    printf("SUMA %d ELEMENTOW: %.4lf ",count, sum );
+    printf("SUMA %lf \n", sum );
 
     return 0;
 }
+
