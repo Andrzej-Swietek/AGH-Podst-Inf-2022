@@ -14,6 +14,7 @@ float random_float( float min, float max ) {
 int main(){
 
     long long tab[20];
+    for(int i=0; i< 20; i++) tab[i]=0;
     int n;
     scanf("%d", &n);
     assert(n >= 10000);
