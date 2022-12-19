@@ -5,8 +5,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
-#include <limits.h>
-#include <stdint.h> // bo INT32_MAX nie wchodzi
+#include <stdint.h>
 
 int main()
 {
@@ -28,18 +27,20 @@ int main()
         for(int i=31; i>=1 ;i--){
             bin[i] = ( bin[i] == '0' ) ? '1' : '0';
         }
-    }
-    int i = 31;
-    while(i>0){
-        if(bin[i]=='0'){
-            bin[i] = '1';
-            break;
+
+        int i = 31;
+        while(i>0){
+            if(bin[i]=='0'){
+                bin[i] = '1';
+                break;
+            }
+            else{
+                bin[i]='0';
+                i--;
+            }
         }
-        else{
-            bin[i]='0';
-            i--;
-        }
     }
+
 
     printf("%32s", bin);
 
