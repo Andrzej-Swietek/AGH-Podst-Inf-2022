@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
-#include <stdint.h>
+#include <stdint.h> // Po INT32_MAX 
 
 int main()
 {
@@ -28,6 +28,7 @@ int main()
             bin[i] = ( bin[i] == '0' ) ? '1' : '0';
         }
 
+        // ta jedynka pozostala
         int i = 31;
         while(i>0){
             if(bin[i]=='0'){

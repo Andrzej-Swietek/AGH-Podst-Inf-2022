@@ -23,7 +23,7 @@ int main(void) {
         }
     }
 
-    int p = 1; // 2^n
+    int p = 1; // 2^n sobie powiekszam zeby nie potegowac co iteracje - memoization :)
     for(int i=N-1;i>=1;i--){
         value += (input[i]=='1')? p : 0;
         p *= 2;

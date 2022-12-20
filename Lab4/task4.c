@@ -26,6 +26,7 @@ int main()
     else
         printf("False \n");
 
+    printf("MASKA: %d", mask); 
 
     return 0;
 }

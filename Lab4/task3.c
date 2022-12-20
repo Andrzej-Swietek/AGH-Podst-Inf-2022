@@ -3,6 +3,7 @@
 //
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 int mod2(int x){
     int sum = 0;
@@ -28,7 +29,7 @@ int main()
 
     for(int i=0;i<N;i++){
         num[i] = rand()%61;
-        printf("%d : %d \n", i, num[i]);
+        printf("Element[%d] = %2d \n", i, num[i]);
         if(mod2(num[i]) == 0){
             even[++current_even] = i;
         }
@@ -45,8 +46,9 @@ int main()
         }
 
     }
+    printf("\nPo zamianie \n");
     for(int i=0;i<N;i++)
-        printf("%d: %d \n", i, num[i]);
+        printf("Element[%d] = %2d \n", i, num[i]);
 
 
     return 0;
