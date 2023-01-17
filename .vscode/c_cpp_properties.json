@@ -4,14 +4,15 @@
             "name": "Mac",
             "includePath": [
                 "${workspaceFolder}/**",
-                "/usr/local/Cellar/gcc/12.2.0/include/c++/12"
+                "/usr/local/Cellar/gcc/12.2.0/include/c++/12",
+                "/usr/local/Cellar/gcc/12.2.0/include/c++/12/tr1"
             ],
             "defines": [],
             "macFrameworkPath": [
                 "/System/Library/Frameworks",
                 "/Library/Frameworks"
             ],
-            "compilerPath": "/usr/bin/clang",
+            "compilerPath": "/usr/bin/gcc",
             "cStandard": "c17",
             "cppStandard": "c++17",
             "intelliSenseMode": "macos-gcc-x64"
